@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>US Wind Energy</title>
+  <link rel="stylesheet" type="text/css" media="screen" href="main-desktop.css">
+  <link rel="stylesheet" type="text/css" media="only screen and (max-width: 480px), only screen and (max-device-width: 480px)" href="main-mobile.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="https://d3js.org/d3.v4.js"></script>
+  <script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
+  <script src="stateData.js"></script>
+  
+</head>
+<body>
+  <div class="header">
+      <span class=main-header>Wind Energy in the US - 2018</span>
+      <span class="sub-header">Texas, Oklahoma, and Iowa are the leading producers of wind energy in 2018</span> 
+      <hr class="header-divider">
+    </div>
+<div class="buttons">
+  <button class="btnMap selected">Installed Capacity</button>
+  <button class="btnScatterPlot">Installed Capacity vs Homes Powered</button>
+</div>
+<div class="container">
+</div>
+<hr>
+<div class="footer">
+  <span class="foot-note">source: <strong>howmuch.net</strong>   |   design: <strong>@shivrajc</strong></span> 
+</div>
+
+<script>
+  if (screen && screen.width > 750) {
+  document.write('<script type="text/javascript" src="main-desktop.js"><\/script>');
+  }
+  </script>
+  
+  <script>
+  if (screen && screen.width < 750) {
+  document.write('<script type="text/javascript" src="main-mobile.js"><\/script>');
+  }
+  </script>
+
+</body>
+</html>

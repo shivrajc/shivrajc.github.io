@@ -1,0 +1,145 @@
+@-webkit-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+@-moz-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+@keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.invisible {
+  opacity: 0; 
+}
+
+.fade-in {
+	opacity:0;  
+	-webkit-animation:fadeIn ease-in 1;  only 1 time */
+	-moz-animation:fadeIn ease-in 1;
+	animation:fadeIn ease-in 1;
+
+	-webkit-animation-fill-mode:forwards;
+	-moz-animation-fill-mode:forwards;
+	animation-fill-mode:forwards;
+
+	-webkit-animation-duration:1s;
+	-moz-animation-duration:1s;
+	animation-duration:1s;
+}
+
+
+body {
+  margin-left: auto;
+  margin-top: 1em;
+  margin-right: auto;
+  text-align: center;
+  font-family: 'Roboto', sans-serif;
+  text-decoration: none;
+}
+
+.hero {
+  margin-top: 1em;
+  text-align: center;
+}
+
+.content {
+  text-align: center;
+}
+
+.squares {
+  fill: white;
+}
+
+.square-colored {
+  fill: #708090;
+}
+
+.gallery-container {
+  margin-top: 4em;
+  margin-bottom: 4em;
+  margin-left: auto;
+  margin-right: auto;
+  width: 55%;
+  text-align: left;
+}
+
+.gallery-container ul {
+  list-style: none;
+}
+
+
+
+.gallery-item img {
+  float: left;
+  margin: 0 2em 0 0;
+  width: 20%;
+}
+
+.gallery-item {
+  color: black;
+  padding: 1em;
+  overflow: auto;
+  /* border: 1px solid #eee; */
+  margin-bottom: 2em; 
+  text-decoration: none;
+  animation: fadeIn 0.5s linear;
+  animation-fill-mode: both;
+  background-color: #F5F5F5;
+}
+
+.gallery-item:hover {
+  background: #eee;
+  cursor: pointer;
+  transform: scale(1.01);
+}
+
+.gallery-item a:visited {
+  color: #3c454e;
+  text-decoration: none;
+}
+
+.gallery-item a {
+  color: #3c454e;
+  text-decoration: none;
+}
+
+.item-header {
+  font-size: 2em;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.item-desc {
+  color: #555;
+  font-size: 1.05em;
+  /* font-weight: 700; */
+  text-decoration: none;
+  margin-top: 0.6em;
+}
+
+/* .footer {
+  height: 3em;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #5a5a5a;
+  color: white;
+  padding: 1em;
+  text-align: center;
+} */
+
+.social-media-icons {
+  margin: 1.5em;
+}
+.social-media-icons a {
+  padding: 0.5em 2em 0.5em 2em;
+  color: #708090;
+  text-decoration: none;
+
+}
+
+.social-media-icons a:hover {
+  background-color: #708090;
+  color: white;
+  text-decoration: underline;
+}
