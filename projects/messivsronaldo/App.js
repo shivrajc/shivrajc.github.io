@@ -4,7 +4,7 @@ let metric = "Goals";
 const radios = document.querySelectorAll("input[type=radio]");
 
 const dimensions = {
-    width: 960,
+    width: window.innerWidth * 0.6,
     height: 550,
     margin: {
         top: 20,
