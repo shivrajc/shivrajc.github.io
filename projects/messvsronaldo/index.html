@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Messi vs. Ronaldo</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="header"><span class="title-messi">MESSI</span> <span class="title-vs">vs</span> <span class="title-ronaldo">RONALDO</span></div>
+        <div class="nav-bar">
+            <div class="league-wrapper">
+                <input type="radio" class="btn-league" name="radioLeague" value="Champions League" id="btn-cl" checked />
+                <label for="btn-cl" class="btn-league-1">Champions League</label>
+                <input type="radio" class="btn-league" name="radioLeague" value="La Liga" id="btn-ll" />
+                <label for="btn-ll" class="btn-league-2">La Liga</label>
+            </div>
+            <div class="stats-wrapper">
+                <input type="radio" class="btn-stats" name="radioStats" value="Goals" id="btn-goals" checked />
+                <label for="btn-goals" class="btn-stats-1">Goals</label>
+                <input type="radio" class="btn-stats" name="radioStats" value="Assists" id="btn-asst" />
+                <label for="btn-asst" class="btn-stats-2">Assists</label>
+                <input type="radio" class="btn-stats" name="radioStats" value="Appearances" id="btn-aps" />
+                <label for="btn-aps" class="btn-stats-3">Appearances</label>
+            </div>
+        </div>
+        <div id="wrapper"></div>
+    </div>
+    <script src="data.js"></script>
+    <script src="App.js"></script>
+</body>
+</html>
