@@ -5,7 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Messi vs. Ronaldo</title>
     <link href="https://fonts.googleapis.com/css?family=Bebas+Neue|Roboto:400,500&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <!-- <link rel="stylesheet" href="style.css"> -->
+    <link rel="stylesheet" type="text/css" media="screen" href="style.css">
+  <link rel="stylesheet" type="text/css" media="only screen and (max-width: 480px), only screen and (max-device-width: 480px)" href="style mobile.css" />
+
     <script src="https://d3js.org/d3.v5.min.js"></script>
 </head>
 <body>
@@ -31,8 +34,9 @@
         <div class="footer"><a href="https://www.makeovermonday.co.uk/">#makeovermonday</a><span class="footer-sep">|</span><a href="https://twitter.com/shivrajc">@shivrajc</a></div>
     </div>
     <script src="data.js"></script>
-    <script src="App.js"></script>
-    if (screen && screen.width > 750) {
+    <!-- <script src="App.js"></script> -->
+    <script>
+        if (screen && screen.width > 750) {
         document.write('<script type="text/javascript" src="App.js"><\/script>');
         }
         </script>
@@ -41,6 +45,6 @@
         if (screen && screen.width < 750) {
         document.write('<script type="text/javascript" src="App mobile.js"><\/script>');
         }
-        </script>  
+    </script>  
 </body>
 </html>
