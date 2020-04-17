@@ -92,10 +92,10 @@ function CreateChart(league, metric) {
         .transition()
         .duration(500)
         .attr("x", d => xScale(d.min))
-        .attr("y", d => yScale(d.Season)-10)
+        .attr("y", d => yScale(d.Season)-8)
         .attr("width", d => xScale(d.max)-xScale(d.min))
         // .attr("width", 40)
-        .attr("height", 20)
+        .attr("height", 16)
         .attr("rx", 2)
         .attr("ry", 2);
         
@@ -111,7 +111,7 @@ function CreateChart(league, metric) {
         .duration(500)
         .attr("cx", d => xScale(d.Messi))
         .attr("cy", d => yScale(d.Season))
-        .attr("r", 10);
+        .attr("r", 8);
         
         const rDots = bounds
         .selectAll(".r-dots")
@@ -126,7 +126,7 @@ function CreateChart(league, metric) {
         .duration(500)
         .attr("cx", d => xScale(d.Ronaldo))
         .attr("cy", d => yScale(d.Season))
-        .attr("r", 10);
+        .attr("r", 8);
     
 
 }
