@@ -5,7 +5,7 @@ const radios = document.querySelectorAll("input[type=radio]");
 
 const dimensions = {
     width: window.innerWidth * 0.9,
-    height: 550,
+    height: 500,
     margin: {
         top: 20,
         right: 0,

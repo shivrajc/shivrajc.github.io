@@ -63,6 +63,7 @@ input[type="radio"] {
 
 .league-wrapper {
 	display: flex;
+	margin: 0;
 }
 
 .stats-wrapper {
