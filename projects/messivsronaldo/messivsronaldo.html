@@ -32,5 +32,15 @@
     </div>
     <script src="data.js"></script>
     <script src="App.js"></script>
+    if (screen && screen.width > 750) {
+        document.write('<script type="text/javascript" src="App.js"><\/script>');
+        }
+        </script>
+        
+        <script>
+        if (screen && screen.width < 750) {
+        document.write('<script type="text/javascript" src="App mobile.js"><\/script>');
+        }
+        </script>  
 </body>
 </html>
