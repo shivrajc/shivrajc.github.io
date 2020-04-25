@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Greenhouse Gas Emissions across Supply Chain</title>
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" media="screen" href="style-desktop.css">
+    <link rel="stylesheet" type="text/css" media="only screen and (max-width: 700px), only screen and (max-device-width: 700px)" href="style-mobile.css" />
+
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+</head>
+<body>
+    <div class="main-container">
+        <div class="header">
+            <p class="title">Greeenhouse gas emissions across food suppy chain</p>
+            <p class="sub-title">Overall, animal-based foods have a higher footprint than plant-based. For most of the products, land use change and farm processes result in higher emissions</p>
+        </div>
+        <div class="separator"></div>
+        <div class="sub-container">
+            <div class="table-container">
+                <!-- <p class="table-title">Emissions per kg of food products</p> -->
+            </div>
+            
+            <div class="chart-container">
+                <p class="chart-title">Emissions across the suppy chain</p>
+                <div id="wrapper"></div>
+            </div>
+        </div>
+        <div class="footer-separator"></div>
+        <div class="footer">
+            <span><a href="https://www.makeovermonday.co.uk/">#makeovermonday</a></span>
+            <span class="footer-pipe">|</span>
+            <span class="twitter-handle"><a href="https://twitter.com/shivrajc">@shivrajc</a></span>
+            <p class="notes"><strong>Notes:</strong>Greenhouse gas emissions are given as global average values based on data across 38700 commercially viable farms in 119 countries.
+            Greenhouse gas emissions are expressed in kilograms of 'carbon dioxide equivalents'. 
+            </p>
+        </div>
+    </div>
+    <script src="data.js"></script>
+    <script>
+        if (screen && screen.width > 750) {
+        document.write('<script type="text/javascript" src="App-Desktop.js"><\/script>');
+        }
+        </script>
+        
+        <script>
+        if (screen && screen.width < 750) {
+        document.write('<script type="text/javascript" src="App-Mobile.js"><\/script>');
+        }
+    </script>  
+</body>
+</html>

@@ -99,7 +99,7 @@ function CreateChart(league, metric) {
         .attr("rx", 2)
         .attr("ry", 2);
         
-        const mDots = bounds
+    const mDots = bounds
         .selectAll(".m-dots")
         .data(data);
         
