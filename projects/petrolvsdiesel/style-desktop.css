@@ -1,0 +1,195 @@
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: sans-serif;
+	margin: 0 auto;
+	text-align: center;
+	/* background-color: rgb(242, 242, 242); */
+	font-family: 'Lato';
+}
+
+.main-container {
+	width: 960px;
+	margin: 0 auto;
+	text-align: center;
+}
+
+.header {
+	margin: 0 auto;
+	text-align: center;
+	/* width: 700px; */
+	height: 150px;
+	background-image: url('header.svg');
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.chart-bans {
+	margin: 0 auto;
+	height: 150px;
+	width: 700px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.petrol-ban .ban-item {
+	background-color: #94d3d1;
+	color: #053331;
+}
+
+.diesel-ban .ban-item {
+	background-color: #efe3af;
+	color: #493b02;
+}
+
+.ban-item {
+	width: 60px;
+	margin: 2px;
+	padding: 0 4px 0 4px;
+	font-family: 'Bebas Neue', cursive;
+	font-size: 80px;
+}
+
+.petrol-ban {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.diesel-ban {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.date-ban {
+	font-size: 24px;
+	font-weight: 300;
+}
+
+text.shadow {
+	stroke: white;
+	stroke-width: 2px;
+	opacity: 0.9;
+}
+
+.area.above {
+	fill: #6fbdc1;
+}
+.area.below {
+	fill: #efe3af;
+}
+
+.line {
+	fill: none;
+	stroke: #000;
+	stroke-width: 1.5px;
+}
+
+.x-axis {
+	font-size: 12px;
+	color: rgb(130, 130, 130);
+}
+
+.x-axis path,
+.x-axis line {
+	stroke: none;
+}
+
+.y-axis {
+	font-size: 12px;
+	color: #666;
+}
+
+.y-axis path {
+	stroke: none;
+}
+
+.y-axis .tick line {
+	stroke: #aaa;
+	stroke-width: 0.5px;
+	stroke-dasharray: 2px;
+	shape-rendering: crispEdges;
+}
+
+.y-axis .tick text {
+	font-size: 12px;
+	color: rgb(130, 130, 130);
+}
+
+.labels {
+	text-anchor: middle;
+	font-size: 20px;
+	font-weight: bold;
+}
+
+.y-axis-title {
+	font-size: 12px;
+	fill: rgb(130, 130, 130);
+}
+
+.listening-rect {
+	fill: transparent;
+}
+
+/* #tooltip {
+	position: absolute;
+} */
+
+.overlay {
+	fill: none;
+	pointer-events: all;
+}
+
+.focus circle {
+	fill: #f1f3f3;
+	stroke: #6f257f;
+	stroke-width: 5px;
+}
+
+.hover-line {
+	stroke: #575757;
+	stroke-width: 1px;
+	stroke-dasharray: 3, 3;
+}
+
+.line-annotation {
+	fill: rgb(125, 124, 124);
+}
+
+.circle-annotation {
+	fill: rgb(125, 124, 124);
+}
+
+.text-annotation-1 {
+	fill: rgb(125, 124, 124);
+	font-size: 12px;
+	text-anchor: middle;
+}
+
+.text-annotation-2 {
+	fill: rgb(125, 124, 124);
+	font-size: 12px;
+	text-anchor: end;
+}
+
+.footer {
+    /* width: 90%; */
+    font-size: 10px;
+    color: rgb(160, 160, 160);
+    /* text-align: left; */
+    padding: 10px 0 10px 0;
+}
+
+.footer .notes {
+    padding-top: 5px;
+}
+
+.footer .footer-pipe {
+    padding: 0px 10px 0 10px;
+}

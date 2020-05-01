@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Petrol and Diesel Prices</title>
+    <link href="https://fonts.googleapis.com/css?family=Bebas+Neue|Lato:400,700&display=swap" rel="stylesheet">
+    <!-- <link rel="stylesheet" href="style-desktop.css"> -->
+    <link rel="stylesheet" type="text/css" media="screen" href="style-desktop.css">
+    <link rel="stylesheet" type="text/css" media="only screen and (max-width: 700px), only screen and (max-device-width: 700px)" href="style-mobile.css" />
+
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+</head>
+<body>
+    <div class="main-container">
+        <div class="header">
+            <!-- <div>
+                <span class="header-petrol">Petrol</span>
+                <span class="header-vs">vs.</span>
+                <span class="header-diesel">Diesel</span>
+            </div>      -->
+        </div>
+        <div class="chart-bans">
+            <div class="petrol-ban">
+                <div class="petrol-1 ban-item">1</div>
+                <div class="petrol-2 ban-item">0</div>
+                <div class="petrol-3 ban-item">9</div>
+            </div>
+            <div class="date-ban">
+                <span class="hover-date-ban">20-Apr-2020</span>
+            </div>
+            <div class="diesel-ban">
+                <div class="diesel-1 ban-item">1</div>
+                <div class="diesel-2 ban-item">1</div>
+                <div class="diesel-3 ban-item">6</div>
+            </div>
+        </div>
+        <!-- <div id="tooltip" class="tooltip">
+            <div class="tooltip-date">
+                <span id="date"></span>
+            </div>
+            <div class="tooltip-value">
+                <div class="tooltip-petrol">
+                    <span class="tooltip-petrol-label"></span>
+                    <span class="tooltip-petrol-price"></span>
+                </div>
+                <div class="tooltip-diesel">
+                    <span class="tooltip-diesel-label"></span>
+                    <span class="tooltip-diesel-price"></span>
+                </div>
+
+            </div>
+        </div> -->
+
+        <div id="wrapper">
+        </div>
+        <div class="footer">
+            <span><a href="https://www.makeovermonday.co.uk/">#makeovermonday</a></span>
+            <span class="footer-pipe">|</span>
+            <span class="twitter-handle"><a href="https://twitter.com/shivrajc">@shivrajc</a></span>
+        </div>
+        <!-- <p class="sub-header">Pump prices in UK</p> -->
+    </div>
+
+    <script src="data.js"></script>
+    <script>
+        if (screen && screen.width > 750) {
+        document.write('<script type="text/javascript" src="App-Desktop.js"><\/script>');
+        }
+        </script>
+        
+        <script>
+        if (screen && screen.width < 750) {
+        document.write('<script type="text/javascript" src="App-Mobile.js"><\/script>');
+        }
+    </script>  
+</body>
+</html>
