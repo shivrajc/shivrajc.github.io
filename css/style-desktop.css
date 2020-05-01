@@ -1,120 +1,144 @@
-@-webkit-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
-@-moz-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
-@keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+@-webkit-keyframes fadeIn {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+@-moz-keyframes fadeIn {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+@keyframes fadeIn {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
 
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
 }
 
 .invisible {
-  opacity: 0; 
+	opacity: 0;
 }
 
 .fade-in {
-	opacity:0;  
-	-webkit-animation:fadeIn ease-in 1;  only 1 time */
-	-moz-animation:fadeIn ease-in 1;
-	animation:fadeIn ease-in 1;
+	opacity: 0;
+	-webkit-animation: fadeIn ease-in 1;
+	only: fadeIn ease-in 1;
+	animation: fadeIn ease-in 1;
 
-	-webkit-animation-fill-mode:forwards;
-	-moz-animation-fill-mode:forwards;
-	animation-fill-mode:forwards;
+	-webkit-animation-fill-mode: forwards;
+	-moz-animation-fill-mode: forwards;
+	animation-fill-mode: forwards;
 
-	-webkit-animation-duration:1s;
-	-moz-animation-duration:1s;
-	animation-duration:1s;
+	-webkit-animation-duration: 1s;
+	-moz-animation-duration: 1s;
+	animation-duration: 1s;
 }
 
-
 body {
-  margin-left: auto;
-  margin-top: 1em;
-  margin-right: auto;
-  text-align: center;
-  font-family: 'Roboto', sans-serif;
-  text-decoration: none;
+	margin-left: auto;
+	margin-top: 1em;
+	margin-right: auto;
+	text-align: center;
+	font-family: 'Roboto', sans-serif;
+	text-decoration: none;
+	/* background-image: url("/assets/images/maintenance.png"); */
+}
+
+.maintenance-image {
+	background-position: center;
+	background-repeat: no-repeat;
 }
 
 .hero {
-  margin-top: 1em;
-  text-align: center;
+	margin-top: 1em;
+	text-align: center;
 }
 
 .content {
-  text-align: center;
+	text-align: center;
 }
 
 .squares {
-  /* fill: white; */
+	/* fill: white; */
 }
 
 .square-colored {
-  /* fill: #708090; */
+	/* fill: #708090; */
 }
 
 .gallery-container {
-  margin-top: 5em;
-  margin-bottom: 4em;
-  margin-left: auto;
-  margin-right: auto;
-  width: 55%;
-  text-align: left;
+	margin-top: 5em;
+	margin-bottom: 4em;
+	margin-left: auto;
+	margin-right: auto;
+	width: 55%;
+	text-align: left;
 }
 
 .gallery-container ul {
-  list-style: none;
+	list-style: none;
 }
 
-
-
 .gallery-item img {
-  float: left;
-  margin: 0 2em 0 0;
-  width: 20%;
+	float: left;
+	margin: 0 2em 0 0;
+	width: 20%;
 }
 
 .gallery-item {
-  color: black;
-  padding: 1em;
-  overflow: auto;
-  /* border: 1px solid #eee; */
-  margin-bottom: 2em; 
-  text-decoration: none;
-  animation: fadeIn 0.5s linear;
-  animation-fill-mode: both;
-  background-color: #F5F5F5;
+	color: black;
+	padding: 1em;
+	overflow: auto;
+	/* border: 1px solid #eee; */
+	margin-bottom: 2em;
+	text-decoration: none;
+	animation: fadeIn 0.5s linear;
+	animation-fill-mode: both;
+	background-color: #f5f5f5;
 }
 
 .gallery-item:hover {
-  background: #eee;
-  cursor: pointer;
-  transform: scale(1.01);
+	background: #eee;
+	cursor: pointer;
+	transform: scale(1.01);
 }
 
 .gallery-item a:visited {
-  color: #3c454e;
-  text-decoration: none;
+	color: #3c454e;
+	text-decoration: none;
 }
 
 .gallery-item a {
-  color: #3c454e;
-  text-decoration: none;
+	color: #3c454e;
+	text-decoration: none;
 }
 
 .item-header {
-  font-size: 2em;
-  font-weight: 700;
-  text-decoration: none;
+	font-size: 2em;
+	font-weight: 700;
+	text-decoration: none;
 }
 
 .item-desc {
-  color: #555;
-  font-size: 1.05em;
-  /* font-weight: 700; */
-  text-decoration: none;
-  margin-top: 0.6em;
+	color: #555;
+	font-size: 1.05em;
+	/* font-weight: 700; */
+	text-decoration: none;
+	margin-top: 0.6em;
 }
 
 /* .footer {
@@ -129,19 +153,18 @@ body {
 } */
 
 .social-media-icons {
-  margin: 1.5em;
+	margin: 1.5em;
 }
 .social-media-icons a {
-  padding: 0.5em 2em 0.5em 2em;
-  color: #a9b3bd;
-  text-decoration: none;
-
+	padding: 0.5em 2em 0.5em 2em;
+	color: #a9b3bd;
+	text-decoration: none;
 }
 
 .social-media-icons a:hover {
-  background-color: #708090;
-  color: white;
-  text-decoration: underline;
+	background-color: #708090;
+	color: white;
+	text-decoration: underline;
 }
 
 .about {
@@ -155,8 +178,8 @@ body {
 }
 
 .tagline {
-  font-size: 1.2em;
-  color: #a9b3bd;
-  letter-spacing: 0.3em;
-  margin: 0.5em auto 1em auto;
+	font-size: 1.2em;
+	color: #a9b3bd;
+	letter-spacing: 0.3em;
+	margin: 0.5em auto 1em auto;
 }
