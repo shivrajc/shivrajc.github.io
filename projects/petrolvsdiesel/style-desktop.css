@@ -30,11 +30,12 @@ body {
 
 .chart-bans {
 	margin: 0 auto;
-	height: 150px;
+	height: 160px;
 	width: 700px;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
+
 }
 
 .petrol-ban .ban-item {
@@ -183,7 +184,7 @@ text.shadow {
     font-size: 10px;
     color: rgb(160, 160, 160);
     /* text-align: left; */
-    padding: 10px 0 10px 0;
+    padding: 0 0 10px 0;
 }
 
 .footer .notes {
