@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Obstetric Fistula</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:100,300,400,600,700,800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" media="screen" href="style-desktop.css">
+    <link rel="stylesheet" type="text/css" media="only screen and (max-width: 700px), only screen and (max-device-width: 700px)" href="style mobile.css" />
+
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="bar-chart">
+            <div class="years-gained">
+                <!-- <p class="years-gained-blank">  -->
+                <p class="quote">"Obstetric fistula, a childbirth injury caused by prolonged, obstructed labour without
+                    prompt medical attention, is silently robbing millions of women and girls of their health,
+                    hope and dignity" — <span class="quote-author"> Dr. Natalia Kanem, Executive Director, UNFPA</span></p>
+                </p>
+                    <p class="years-gained-blank"> </p>
+                    
+                <p class="years-gained-label">average years gained after treatment</p>
+                <p class="years-gained-ban">11</p>
+            </div>
+            <div class="years-lost">
+                <p class="years-lost-ban">2.5</p>
+                <p class="years-lost-label">average years lost without treatment</p>
+            </div>
+        </div>
+        <div class="canvas">
+            <!-- <div id="wrapper"></div> -->
+            <div class="title-section">
+                <p class="title">
+                    <span class="title-1">OBSTETRIC FISTULA</span><span class="title-2"> IN MADAGASCAR</span>
+                    <img src="info.png" alt="info">
+                </p>
+                <p class="title-description">Fistula is a childbirth injury that happens when a woman who needs a c-section doesn’t get a good one in time. After losing her child the woman is left with an injury that devastates her life.</p>
+                <p class="title-description-2">This data is a subset of anonymized patient data from Madagascar between February 2018 and February 2020.</p>
+            </div>
+            <div class="nav-bar">
+                <!-- <button>Age</button> -->
+                <div class="control-wrapper">
+                    <input type="radio" class="btn-all-patients" name="radioStats" value="All" id="btn-all" checked />
+                    <label for="btn-all" class="btn-1">All</label>
+
+                    <input type="radio" class="btn-age-group" name="radioStats" value="age_group" id="btn-age" />
+                    <label for="btn-age" class="btn-2">Age Group</label>
+
+                    <input type="radio" class="btn-education-level" name="radioStats" value="education_level" id="btn-education" />
+                    <label for="btn-education" class="btn-3">Education Level</label>
+
+                    <input type="radio" class="btn-cause-fistula" name="radioStats" value="cause_of_fistula" id="btn-cause" />
+                    <label for="btn-cause" class="btn-4">Cause of Fistula</label>
+
+                    <input type="radio" class="btn-patient-symptoms" name="radioStats" value="patient_symptoms" id="btn-symptoms" />
+                    <label for="btn-symptoms" class="btn-5">Patient Symptoms</label>
+
+                    <input type="radio" class="btn-length-labor" name="radioStats" value="length_of_labor" id="btn-labor" />
+                    <label for="btn-labor" class="btn-6">Length of Labor</label>
+
+                    <input type="radio" class="btn-location-delivery" name="radioStats" value="location_of_delivery" id="btn-location" />
+                    <label for="btn-location" class="btn-7">Location of Delivery</label>
+
+                    <input type="radio" class="btn-outcome-delivery" name="radioStats" value="outcome_of_delivery" id="btn-outcome" />
+                    <label for="btn-outcome" class="btn-8">Outcome of Delivery</label>
+
+                </div>
+            </div>
+            <div id="wrapper">
+            </div>
+            <!-- <div class="footer">
+                <a href="https://www.makeovermonday.co.uk/">#makeovermonday</a><span class="footer-sep">|</span>
+                <a href="https://twitter.com/shivrajc">@shivrajc</a>
+            </div> -->
+        </div>
+    </div>
+
+    <script src="data.js"></script>
+    <script>
+        if (screen && screen.width > 750) {
+        document.write('<script type="text/javascript" src="app-desktop.js"><\/script>');
+        }
+        </script>
+        
+        <script>
+        if (screen && screen.width < 750) {
+        document.write('<script type="text/javascript" src="app-mobile.js"><\/script>');
+        }
+    </script>  
+</body>
+</html>
