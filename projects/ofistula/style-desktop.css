@@ -23,8 +23,8 @@ body {
 
 .title {
 	font-size: 40px;
-    color: #595450;
-    letter-spacing: 1.5px;
+	color: #595450;
+	letter-spacing: 1.5px;
 }
 
 .title-1 {
@@ -40,6 +40,7 @@ body {
 	font-size: 14px;
 	color: #989390;
 	line-height: 1.6;
+	padding-left: 3px !important;
 }
 
 /* img {
@@ -198,8 +199,8 @@ input[type="radio"] {
 }
 
 .control-wrapper label:hover {
-    background-color: #eeece9;
-    cursor: pointer;
+	background-color: #eeece9;
+	cursor: pointer;
 }
 
 input[type="radio"]:checked + label {
@@ -251,17 +252,17 @@ input[type="radio"]:checked + label {
 	font-size: 10px;
 	margin: 0;
 	padding: 0 60px 0 20px;
-    text-align: right;
-    
+	text-align: right;
 }
 
 .footer-sep {
 	margin: 0 10px;
-    color: #a9a6a5;
+	color: #a9a6a5;
 }
 
-.footer a:link, .footer a:visited {
-    color: #a9a6a5;
+.footer a:link,
+.footer a:visited {
+	color: #a9a6a5;
 }
 
 .items {
@@ -284,7 +285,7 @@ input[type="radio"]:checked + label {
 	/* border: 1px solid white; */
 	stroke-width: 0.5px;
 	stroke: white;
-	fill: #CDC6C1;
+	fill: #cdc6c1;
 }
 
 .label-legend {
