@@ -125,12 +125,12 @@ function UpdateChart(column, values) {
         const text = bounds.append("text")
             .attr("x", (i%60) * 16)
             .attr("y", (Math.floor(i/60) * 16) + ypos-8)
-            .text(el)
+            .text(el + ":")
             .attr("class", "label")
             .style("opacity", 0);
 
         bounds.append("text")
-            .attr("x", (i%60) * 16 + text.node().getBBox().width + 10)
+            .attr("x", (i%60) * 16 + text.node().getBBox().width + 5)
             .attr("y", (Math.floor(i/60) * 16) + ypos-8)
             .text(itemCount[el])
             .attr("class", "value-label")
