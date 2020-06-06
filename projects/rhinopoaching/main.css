@@ -1,0 +1,104 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #eee;
+  margin-top: 0;
+  margin-bottom: 0;
+  margin-left: auto;
+  margin-right: auto;
+  /* margin: 0 auto; */
+}
+
+.chart-area {
+  text-align: center;
+  /* background: #eee; */
+  /* border: 1px solid gray; */
+}
+
+svg {
+  /* background: #eee; */
+}
+
+.circle {
+  fill: red;
+}
+
+.header {
+  margin-top: 1em;
+  text-align: center;
+  /* display: none; */
+}
+
+.title {
+  font-family: 'Open Sans', sans-serif, Arial;
+  font-size: 4em;
+  font-weight: 700;
+  color: red;
+}
+
+.total-ban {
+  font-family: 'Open Sans', sans-serif, Arial;
+  font-size: 1.5em;
+  font-weight: 700;
+  fill: red;
+  text-anchor: initial;
+}
+
+
+.total-text {
+  font-family: 'Open Sans', sans-serif, Arial;
+  font-size: 1.5em;
+  text-anchor: middle;
+  fill: rgb(80, 80, 80);
+}
+
+button {
+    opacity: 0;
+    position: absolute;
+    background-color: red;
+    border: none;
+    color: white;
+    padding: 0.5em;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    text-anchor: middle;
+    cursor: pointer;
+  }
+  
+button:hover {
+    background-color: white;
+    color: red;
+}
+
+.bars {
+  fill: red;
+}
+
+.x-axis-label {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 0.9em;
+  fill: rgb(90, 90, 90);
+  text-anchor: middle;
+}
+
+.chart-label {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.2em;
+  font-weight: bold;
+  fill: red;
+  text-anchor: middle;
+}
+
+.credits {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 0.6em;
+  fill: rgb(121, 121, 121);
+  /* text-anchor: middle; */
+
+}
