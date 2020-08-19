@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tech Companiesin Scotland</title>
+    <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.typekit.net/avt1ekd.css">
+    <script src="https://d3js.org/d3.v4.min.js"></script>
+    <script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
+    <!-- <script src="https://d3js.org/d3-geo-projection.v2.min.js"></script> -->
+    <script src="https://d3js.org/topojson.v2.min.js"></script>
+    <script src="https://unpkg.com/textures@1.2.0/dist/textures.js"></script>
+    <script src="https://unpkg.com/flubber@0.3.0"></script>
+    <!-- <script src="https://unpkg.com/svg-tween/dist/svg-tween.min.js"></script> -->
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+    <!-- <a href='#' onclick='downloadCSV({ filename: "stock-data.csv" });'>Download CSV</a> -->
+    <div class="container">
+        <div class="header">
+            <h1 class="title">TECH COMPANIES IN SCOTLAND</h1>
+            <p class="sub-title"><strong>71%</strong> of all tech companies in Scotland are based in
+                <strong>Midlothian</strong>, <strong>Glasgow</strong>, and <strong>Aberdeenshire</strong></p>
+            <div class="nav-bar">
+                <div class="toggle-wrapper">
+                    <input type="radio" class="btn-chart" name="radioToggle" value="Bar Chart" id="btn-c" checked />
+                    <label for="btn-c" class="btn-chart-1">Bar Chart</label>
+                    <input type="radio" class="btn-map" name="radioToggle" value="Map" id="btn-m" />
+                    <label for="btn-m" class="btn-chart-2">Map</label>
+                </div>
+            </div>
+            <!-- <button class="temp">temp</button> -->
+        </div>
+        <!-- <svg viewBox="0 0 500 600" xmlns="http://www.w3.org/2000/svg"></svg> -->
+    </div>
+    <div class="footer">
+        <div><a href="https://www.makeovermonday.co.uk/" target="_blank">#makeovermonday</a></div>
+        <div class="footer-divider"><span>|</span></div>
+        <div><a href="https://twitter.com/shivrajc" target="_blank">@shivrajc</a></div>
+    </div>
+
+    <script src="data.js"></script>
+    <script src="App.js"></script>
+
+</body>
+
+</html>
