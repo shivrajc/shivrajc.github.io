@@ -2,13 +2,13 @@ const margin = {
     top: 20,
     right: 20,
     bottom: 20,
-    left: 560
+    left: 600
 }
 
 const data2 =[];
 
 const width = 960 - margin.left - margin.right,
-      height = 500 - margin.top - margin.bottom;
+      height = 450 - margin.top - margin.bottom;
 
 const format = d3.format(".1f");
 
@@ -19,6 +19,7 @@ data.forEach(d => {
         data2.push({    
             Batsman: d.Batsman,
             Dismissals: d.Dismissals,
+            Average: d.Average,
             index: i
         })        
     })
@@ -51,7 +52,7 @@ const circleTexture =   textures.lines()
     .size(4)
     .strokeWidth(1)
     .shapeRendering("crispEdges")
-    .stroke("#cf474a");
+    .stroke("#E54467");
 
 svg.call(barTexture);
 svg.call(circleTexture);
@@ -70,9 +71,9 @@ svg.selectAll(".bars")
     .join("rect")
     .classed("bars", true)
     .attr("x", 0)
-    .attr("y", d => yScale(d.Batsman)+20)
+    .attr("y", d => yScale(d.Batsman)+18)
     .attr("width", d => xScale(d.Average))
-    .attr("height", yScale.bandwidth()-56)
+    .attr("height", yScale.bandwidth()-52)
     .attr("fill", barTexture.url());
 
 svg.selectAll(".label-batsman")
@@ -100,14 +101,14 @@ svg.selectAll(".label-dismissals")
     .text(d => d.Dismissals);
 
 svg.selectAll(".circles")
-    .data(data2, d => d.Batsman)
+    .data(data2, d => d.Batsman + d.index.toString())
     .join("circle")
     .classed("circles", true)
     .attr("cx", d => -304 - (d.index*20))
     .attr("cy", d => yScale(d.Batsman) + (yScale.bandwidth()/2)-7)
     .attr("r", 8)
     .attr("fill", circleTexture.url())
-    .attr("stroke", "#cf474a");
+    .attr("stroke", "#E54467");
 
 svg.append("text")
     .text("DISMISSALS")
@@ -115,8 +116,10 @@ svg.append("text")
     .attr("x", -264);
 
 svg.append("text")
-    .text("BATTING AVERAGE")
+    .text("BATTING AVERAGE ▽")
+    // .html(`<a href="#" title="Click">BATTING AVERAGE ▽</a>`)
     .classed("header-a", true)
+    .style("font-weight", 600)
     .attr("x", -60);
 
 svg.append("text")
@@ -136,29 +139,76 @@ svg.append("rect")
     .attr("y", 20)
     .attr("width", 300)
     .attr("height", 1)
-    .attr("fill", "#cf474a");
+    .attr("fill", "#E54467");
 
-svg.append("rect")
-    .attr("x", -60)
-    .attr("y", height-36)
-    .attr("width", 450)
-    .attr("height", 1)
-    .attr("fill", "#038DCC");
+// svg.append("rect")
+//     .attr("x", -60)
+//     .attr("y", height-36)
+//     .attr("width", 450)
+//     .attr("height", 1)
+//     .attr("fill", "#038DCC");
 
-svg.append("rect")
-    .attr("x", -264-300)
-    .attr("y", height-36)
-    .attr("width", 300)
-    .attr("height", 1)
-    .attr("fill", "#cf474a");
+// svg.append("rect")
+//     .attr("x", -264-300)
+//     .attr("y", height-36)
+//     .attr("width", 300)
+//     .attr("height", 1)
+//     .attr("fill", "#cf474a");
 
 svg.select(".header-d")
-    .on("click", () => {
-        order(data.sort((a, b) => b.Dismissals-a.Dismissals), data2.sort((a, b) => b.Dismissals-a.Dismissals))
-    })
+    .on("click", function() {
+        // order(data.sort((a, b) => b.Dismissals-a.Dismissals), data2.sort((a, b) => b.Dismissals-a.Dismissals));
+
+        // d3.select(this)
+        //     .text(`DISMISSALS ▽`)
+        //     .style("font-weight", 600)
+
+
+        const curElement = d3.select(this);
+
+        if (curElement.text() === `DISMISSALS ▽`) {
+            order(data.sort((a, b) => a.Dismissals-b.Dismissals), data2.sort((a, b) => a.Dismissals-b.Dismissals));
+            curElement
+                .text(`DISMISSALS △`)
+                .style("font-weight", 600);
+        } else {
+            order(data.sort((a, b) => b.Dismissals-a.Dismissals), data2.sort((a, b) => b.Dismissals-a.Dismissals));
+            curElement
+                .text(`DISMISSALS ▽`)
+                .style("font-weight", 600);
+        }
+
+        d3.select(".header-a")
+            .text("BATTING AVERAGE")
+            .style("font-weight", 400)
+    
+    });
+        
+svg.select(".header-a")
+    .on("click", function() {
+        const curElement = d3.select(this);
+
+        if (curElement.text() === `BATTING AVERAGE ▽`) {
+            order(data.sort((a, b) => a.Average-b.Average), data2.sort((a, b) => a.Average-b.Average));
+            curElement
+                .text(`BATTING AVERAGE △`)
+                .style("font-weight", 600);
+        } else {
+            order(data.sort((a, b) => b.Average-a.Average), data2.sort((a, b) => b.Average-a.Average));
+            curElement
+                .text(`BATTING AVERAGE ▽`)
+                .style("font-weight", 600);
+        }
+
+        d3.select(".header-d")
+            .text("DISMISSALS")
+            .style("font-weight", 400);
+        
+    });
 
 
 function order(dataset, dataset2) {
+
     yScale.domain(dataset.map(d => d.Batsman));
 
     d3.selectAll(".bars")
@@ -169,17 +219,25 @@ function order(dataset, dataset2) {
 
     svg.selectAll(".label-batsman")
         .data(dataset, d => d.Batsman)
+        .transition()
+        .duration(1000)
         .attr("y", d => yScale(d.Batsman) + (yScale.bandwidth()/2)); 
 
     svg.selectAll(".label-average")
         .data(dataset, d => d.Batsman)
+        .transition()
+        .duration(1000)
         .attr("y", d => yScale(d.Batsman) + (yScale.bandwidth()/2));
 
     svg.selectAll(".label-dismissals")
         .data(dataset, d => d.Batsman)
+        .transition()
+        .duration(1000)
         .attr("y", d => yScale(d.Batsman) + (yScale.bandwidth()/2));
     
     svg.selectAll(".circles")
-        .data(dataset2, d => d.Batsman)
+        .data(dataset2, d => d.Batsman + d.index.toString())
+        .transition()
+        .duration(1000)
         .attr("cy", d => yScale(d.Batsman) + (yScale.bandwidth()/2)-7);
 }
