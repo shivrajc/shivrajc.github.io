@@ -45,7 +45,6 @@ const barTexture = textures.lines()
     .orientation("3/8", "7/8")
     .strokeWidth(1.2)
     .stroke("#038DCC");
-    // .background("#DAEAF1");
 
 const circleTexture =   textures.lines()
     .orientation("vertical", "horizontal")
@@ -56,15 +55,6 @@ const circleTexture =   textures.lines()
 
 svg.call(barTexture);
 svg.call(circleTexture);
-
-// const yAxis = bounds.append("g")
-//     .attr("transform", `translate(${dimensions.margin.left-10}, ${-(dimensions.margin.top+4)})`)
-//     .attr("class", "y-axis")
-//     .call(d3.axisLeft(yScale));
-
-// const xAxis = bounds.append("g")
-//     .attr("transform", `translate(0, ${dimensions.margin.top})`)
-//     .attr("class", "x-axis");
 
 svg.selectAll(".bars")
     .data(data, d => d.Batsman)
@@ -117,7 +107,6 @@ svg.append("text")
 
 svg.append("text")
     .text("BATTING AVERAGE ▽")
-    // .html(`<a href="#" title="Click">BATTING AVERAGE ▽</a>`)
     .classed("header-a", true)
     .style("font-weight", 600)
     .attr("x", -60);
@@ -157,13 +146,6 @@ svg.append("rect")
 
 svg.select(".header-d")
     .on("click", function() {
-        // order(data.sort((a, b) => b.Dismissals-a.Dismissals), data2.sort((a, b) => b.Dismissals-a.Dismissals));
-
-        // d3.select(this)
-        //     .text(`DISMISSALS ▽`)
-        //     .style("font-weight", 600)
-
-
         const curElement = d3.select(this);
 
         if (curElement.text() === `DISMISSALS ▽`) {
