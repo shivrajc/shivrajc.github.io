@@ -61,7 +61,7 @@ svg.selectAll(".bars")
     .join("rect")
     .classed("bars", true)
     .attr("x", 0)
-    .attr("y", d => yScale(d.Batsman)+18)
+    .attr("y", d => yScale(d.Batsman)+19)
     .attr("width", d => xScale(d.Average))
     .attr("height", yScale.bandwidth()-52)
     .attr("fill", barTexture.url());
