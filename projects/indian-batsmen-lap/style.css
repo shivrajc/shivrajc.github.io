@@ -1,0 +1,77 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    margin: 0 auto;
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
+}
+
+svg {
+    /* overflow: visible; */
+}
+
+.header {
+    height: 200px;
+    /* background-color: #232534; */
+}
+
+.bars {
+    stroke: #038DCC;
+}
+
+.label-batsman {
+    text-transform: uppercase;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    font-size: 1.1em;
+    letter-spacing: 0.05em;
+    text-anchor: middle;
+    fill: #34374E;
+    /* vertical-align: middle; */
+}
+
+.label-average {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 800;
+    font-size: 1.2em;
+    /* letter-spacing: 0.1em; */
+    text-anchor: start;
+    fill: #038DCC;
+    /* vertical-align: middle; */
+}
+
+.label-dismissals {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 800;
+    font-size: 1.2em;
+    /* letter-spacing: 0.1em; */
+    text-anchor: end;
+    fill: #cf474a;
+    /* vertical-align: middle; */
+}
+
+.header-d {
+    text-anchor: end;
+    font-weight: 400;
+    font-size: 1em;
+    fill: #cf474a;
+
+}
+
+.header-a {
+    text-anchor: start;
+    font-weight: 400;
+    font-size: 1em;
+    fill: #038DCC;
+}
+
+.header-batsman {
+    text-anchor: middle;
+    font-weight: 400;
+    font-size: 1em;
+    fill: #7b7c80;
+}
