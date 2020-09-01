@@ -1,0 +1,139 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    margin: 0 auto;
+    text-align: center;
+    font-family: 'Open Sans', sans-serif; 
+}
+
+.main-container {
+    width: 380px;
+    margin: 60px auto 0 auto;
+    padding: 20px 20px 0 20px;
+    text-align: center;
+    /* background-color: white;
+    border-radius: 8px;
+    box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.25), 0px 4px 24px rgba(0, 0, 0, 0.25); */
+    /* background-color: white; */
+}
+
+.header {
+    height: 360px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.title {
+    font-family: 'Bebas Neue', cursive;
+    font-size: 42px;
+    letter-spacing: 0.05em;
+}
+
+.title-vs {
+    font-family: 'Bebas Neue', cursive;
+    font-size: 28px;
+}
+
+.sub-title {
+    margin: 0 auto;
+    font-size: 1em;
+    width: 340px;
+}
+
+.chart-title {
+    margin: 30px 0 0 0;
+    font-size: 1em;
+    letter-spacing: .1em;
+    color: #3d3f48;
+}
+
+.bars {
+    stroke: #038DCC;
+}
+
+.label-batsman {
+    text-transform: uppercase;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    font-size: 1.1em;
+    letter-spacing: 0.05em;
+    text-anchor: middle;
+    fill: #34374E;
+}
+
+.label-average {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 800;
+    font-size: 1.2em;
+    text-anchor: start;
+    fill: #038DCC;
+}
+
+.label-dismissals {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 800;
+    font-size: 1.2em;
+    text-anchor: end;
+    fill: #E54467;
+}
+
+.header-d {
+    text-anchor: end;
+    font-family: 'Lato', sans-serif;
+    font-weight: 400;
+    font-size: 1em;
+    fill: #E54467;
+
+}
+
+.header-d:hover {
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.header-a:hover {
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.header-a {
+    font-family: 'Lato', sans-serif;
+    text-anchor: start;
+    font-weight: 400;
+    font-size: 1em;
+    fill: #038DCC;
+}
+
+.header-batsman {
+    font-family: 'Lato', sans-serif;
+    text-anchor: middle;
+    font-weight: 400;
+    font-size: 1em;
+    fill: #7b7c80;
+}
+
+.footer {
+    width: 380px;
+    margin: 10px auto 60px auto;
+    text-align: center;
+	font-size: 12px;
+    color: #C3DBE5;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.footer a {
+	font-size: 12px;
+	color: #C3DBE5;
+}
+
+.footer-sep {
+	margin: 0 20px;
+}
