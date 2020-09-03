@@ -10,7 +10,7 @@ const data2 =[];
 const width = 960 - margin.left - margin.right,
       height = 450 - margin.top - margin.bottom;
 
-const format = d3.format(".1f");
+const format = d3.format(".2f");
 
 let data = [{"Batsman":"Virat Kohli","Average":100,"Dismissals":5},{"Batsman":"Kedar Jadhav","Average":62,"Dismissals":1},{"Batsman":"Rohit Sharma","Average":51.9,"Dismissals":10},{"Batsman":"Shikhar Dhawan","Average":34.4,"Dismissals":12},{"Batsman":"MS Dhoni","Average":24.77,"Dismissals":9}];
 
@@ -60,7 +60,7 @@ svg.selectAll(".bars")
     .data(data, d => d.Batsman)
     .join("rect")
     .classed("bars", true)
-    .attr("x", 0)
+    .attr("x", 10)
     .attr("y", d => yScale(d.Batsman)+19)
     .attr("width", d => xScale(d.Average))
     .attr("height", yScale.bandwidth()-52)
