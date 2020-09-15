@@ -19,6 +19,7 @@ body {
 
 .social-media-icons a {
 	padding: 0.5em 2em 0.5em 0;
+	color: black;
 }
 
 .social-media-icons a:visited {
@@ -42,6 +43,8 @@ hr {
 .project-link {
 	font-size: 16px;
 	margin-bottom: 4em;
+	font-weight: 500;
+	color: black;
 }
 
 .project-desc {
