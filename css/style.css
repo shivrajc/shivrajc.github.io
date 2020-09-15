@@ -6,10 +6,15 @@
 
 body {
 	margin: 5% 10% 5% 10%;
-	font-family: 'Cardo', serif;
+	/* font-family: 'Cardo', serif; */
+	font-family: 'Roboto Mono', monospace;
 
 	/* text-align: left; */
 	/* background-color: #f0f0f0; */
+}
+
+.header {
+	font-weight: 300;
 }
 
 .social-media-icons {
@@ -26,7 +31,7 @@ body {
 
 
 hr {
-	width: 300px;
+	width: 400px;
 }
 
 .project-list {
@@ -39,13 +44,14 @@ hr {
 }
 
 .project-link {
-	font-size: 18px;
+	font-size: 16px;
 	margin-bottom: 4em;
 }
 
 .project-desc {
 	/* font-size: 18px; */
 	padding-top: 4px;
+	font-weight: 300;
 }
 
 .project-link:visited {
