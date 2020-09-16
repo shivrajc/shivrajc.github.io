@@ -11,6 +11,7 @@ body {
 
 .header {
 	font-weight: 300;
+	/* color: #539ad0; */
 }
 
 .social-media-icons {
@@ -19,11 +20,11 @@ body {
 
 .social-media-icons a {
 	padding: 0.5em 2em 0.5em 0;
-	color: black;
+	color: #539ad0;
 }
 
 .social-media-icons a:visited {
-	color: black;
+	color: #539ad0;
 }
 
 
@@ -44,7 +45,7 @@ hr {
 	font-size: 16px;
 	margin-bottom: 4em;
 	font-weight: 500;
-	color: black;
+	color: #539ad0;
 }
 
 .project-desc {
@@ -54,7 +55,7 @@ hr {
 }
 
 .project-link:visited {
-	color: black;
+	color: #539ad0;
 }
 
 .about {
