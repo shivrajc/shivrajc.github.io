@@ -772,16 +772,15 @@ div.tooltip-dot {
     text-anchor: middle;
     width: 30px;
     height: 30px;
-    background-color: lightcoral;
-    border: none;
+    background-color: transparent;
+    border: 1px solid #484440;
     border-radius: 50%;
     outline: none;
 }
 
 .item-tooltip-header-title button:hover {
     cursor: pointer;
-    background-color: rgb(210, 70, 70);
-    color: white;
+    background-color: lightcoral;
 }
 
 .source {
