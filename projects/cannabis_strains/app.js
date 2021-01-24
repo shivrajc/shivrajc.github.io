@@ -430,7 +430,7 @@ function UpdateChart(data, svg, type, svgBars) {
             d3.select(".item-tooltip-effects-value").html(d.effects.split(",").map(eff => `<p>${eff},&nbsp</p>`).join('').slice(0, -10) + "</p>");
 
             d3.select(".item-tooltip-flavors-value").selectAll("p").remove();
-            d3.select(".item-tooltip-flavors-value").html(d.effects.split(",").map(eff => `<p>${eff},&nbsp</p>`).join('').slice(0, -10) + "</p>");
+            d3.select(".item-tooltip-flavors-value").html(d.flavor.split(",").map(eff => `<p>${eff},&nbsp</p>`).join('').slice(0, -10) + "</p>");
          
             tooltipDot.style("opacity", 0);
             modalOverlay.classed("closed", false);
