@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cannabis Strains</title>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="bottom-right2.svg" sizes="16x16"> 
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+
+</head>
+<body>
+    <img class="top-left" src="top-left.svg" alt="">
+
+    <div class="container-root">
+        <section class="container-1">
+            <div class="page-content">
+                <div class="desc-container">
+                    <div class="page-title">cannabis strains</div>
+                    <div class="page-desc">Cannabis strains are a variety of the plant <i>Cannabis</i>, used for industrial, recreational and medical purposes. They are broadly classified into
+                        <strong>indica</strong>, <strong>sativa</strong>, and the <strong>hybrids</strong>. The varities are developed to have certain taste and effect on the user and brand them accordingly.</div>
+                    <div class="page-desc-2">
+                        <div class="desc-indica">
+                            <p class="desc-indica-title">indica</p>
+                            <p class="desc-indica-text">Indica plants are typically short and bushy with wide leaves. An indica strains tend to be relaxing and associated with more bodily sensations.</p>
+                        </div> 
+                        <div class="desc-sativa">
+                            <p class="desc-sativa-text">Sativa plants are typically taller with long thin leaves. Sativa strains tend to be uplifting and come with a cerebral feeling.</p>
+                            <p class="desc-sativa-title">sativa</p>
+                        </div>
+                        <div class="desc-hybrid">
+                            <p class="desc-hybrid-title">hybrid</p>
+                            <p class="desc-hybrid-text">Hybrid strains have some effects from both indica and sativa. They are a mix of body and cerebral effects. </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="chart-container"></div>
+            </div>
+            <div class="page-footer">
+                <p>Explore all the strains below</p> <i class="chevron bottom"></i>
+            </div>
+        </section>
+        
+        <section class="container-2">
+            <div class="main-container">
+                <div class="side-bar" data-aos="fade-right">
+                    <div class="effects-filter">
+                        <div class="effects-filter-header">
+                            <span class="filter-header">EFFECTS</span>
+
+                            <div class="filter-btn">
+                                <button class="effects-filter-all select-all btn-filter" onclick="selectAllEffects()">Select All</button>
+                                <button class="effects-filter-none select-none btn-filter" onclick="clearEffects()">Clear All</button>
+                            </div>
+                        </div>                    
+                        
+                        <div class="effects-list">
+                            <ul class="effects-cboxtags">
+                                <li><input type="checkbox" id="effects-list-1" value="Aroused" checked><label for="effects-list-1">Aroused</label></li>
+                                <li><input type="checkbox" id="effects-list-2" value="Creative" checked><label for="effects-list-2">Creative</label></li>
+                                <li><input type="checkbox" id="effects-list-3" value="Dry Mouth" checked><label for="effects-list-3">Dry Mouth</label></li>
+                                <li><input type="checkbox" id="effects-list-4" value="Energetic" checked><label for="effects-list-4">Energetic</label></li>
+                                <li><input type="checkbox" id="effects-list-5" value="Euphoric" checked><label for="effects-list-5">Euphoric</label></li>
+                                <li><input type="checkbox" id="effects-list-6" value="Focused"><label for="effects-list-6">Focused</label></li>
+                                <li><input type="checkbox" id="effects-list-7" value="Giggly"><label for="effects-list-7">Giggly</label></li>
+                                <li><input type="checkbox" id="effects-list-8" value="Happy"><label for="effects-list-8">Happy</label></li>
+                                <li><input type="checkbox" id="effects-list-9" value="Hungry"><label for="effects-list-9">Hungry</label></li>
+                                <li><input type="checkbox" id="effects-list-10" value="None"><label for="effects-list-10">None</label></li>
+                                <li><input type="checkbox" id="effects-list-11" value="Relaxed"><label for="effects-list-11">Relaxed</label></li>
+                                <li><input type="checkbox" id="effects-list-12" value="Sleepy"><label for="effects-list-12">Sleepy</label></li>
+                                <li><input type="checkbox" id="effects-list-13" value="Talkative"><label for="effects-list-13">Talkative</label></li>
+                                <li><input type="checkbox" id="effects-list-14" value="Tingly"><label for="effects-list-14">Tingly</label></li>
+                                <li><input type="checkbox" id="effects-list-15" value="Uplifted"><label for="effects-list-15">Uplifted</label></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="flavors-filter">
+                          <div class="flavors-filter-header">
+                            <span class="filter-header">FLAVORS</span>
+
+                            <div class="filter-btn">
+                                <button class="flavors-filter-all select-all btn-filter" onclick="selectAllFlavors()">Select All</button>
+                                <button class="flavors-filter-none select-none btn-filter" onclick="clearFlavors()">Clear All</button>                        
+                            </div>
+                        </div>                    
+
+                        <div class="flavors-list">
+                            <ul class="flavors-cboxtags">
+                                <li><input type="checkbox" id="flavors-list-1" value="Ammonia" checked><label for="flavors-list-1">Ammonia</label></li>
+                                <li><input type="checkbox" id="flavors-list-2" value="Apple" checked><label for="flavors-list-2">Apple</label></li>
+                                <li><input type="checkbox" id="flavors-list-3" value="Apricot" checked><label for="flavors-list-3">Apricot</label></li>
+                                <li><input type="checkbox" id="flavors-list-4" value="Berry" checked><label for="flavors-list-4">Berry</label></li>
+                                <li><input type="checkbox" id="flavors-list-5" value="Bubblegum" checked><label for="flavors-list-5">Bubblegum</label></li>
+                                <li><input type="checkbox" id="flavors-list-6" value="Butter"><label for="flavors-list-6">Butter</label></li>
+                                <li><input type="checkbox" id="flavors-list-7" value="Cheese"><label for="flavors-list-7">Cheese</label></li>
+                                <li><input type="checkbox" id="flavors-list-8" value="Chemical"><label for="flavors-list-8">Chemical</label></li>
+                                <li><input type="checkbox" id="flavors-list-9" value="Chestnut"><label for="flavors-list-9">Chestnut</label></li>
+                                <li><input type="checkbox" id="flavors-list-10" value="Citrus"><label for="flavors-list-10">Citrus</label></li>
+                                <li><input type="checkbox" id="flavors-list-11" value="Coffee"><label for="flavors-list-11">Coffee</label></li>
+                                <li><input type="checkbox" id="flavors-list-12" value="Diesel"><label for="flavors-list-12">Diesel</label></li>
+                                <li><input type="checkbox" id="flavors-list-13" value="Earthy"><label for="flavors-list-13">Earthy</label></li>
+                                <li><input type="checkbox" id="flavors-list-14" value="Flowery"><label for="flavors-list-14">Flowery</label></li>
+                                <li><input type="checkbox" id="flavors-list-15" value="Fruity"><label for="flavors-list-15">Fruity</label></li>
+
+                                <li><input type="checkbox" id="flavors-list-16" value="Grape"><label for="flavors-list-16">Grape</label></li>
+                                <li><input type="checkbox" id="flavors-list-17" value="Honey"><label for="flavors-list-17">Honey</label></li>
+                                <li><input type="checkbox" id="flavors-list-18" value="Lavender"><label for="flavors-list-18">Lavender</label></li>
+                                <li><input type="checkbox" id="flavors-list-19" value="Lemon"><label for="flavors-list-19">Lemon</label></li>
+                                <li><input type="checkbox" id="flavors-list-20" value="Mango"><label for="flavors-list-20">Mango</label></li>
+                                <li><input type="checkbox" id="flavors-list-21" value="Menthol"><label for="flavors-list-21">Menthol</label></li>
+                                <li><input type="checkbox" id="flavors-list-22" value="Minty"><label for="flavors-list-22">Minty</label></li>
+                                <li><input type="checkbox" id="flavors-list-23" value="None"><label for="flavors-list-23">None</label></li>
+                                <li><input type="checkbox" id="flavors-list-24" value="Nutty"><label for="flavors-list-24">Nutty</label></li>
+                                <li><input type="checkbox" id="flavors-list-25" value="Orange"><label for="flavors-list-25">Orange</label></li>
+                                <li><input type="checkbox" id="flavors-list-26" value="Peach"><label for="flavors-list-26">Peach</label></li>
+                                <li><input type="checkbox" id="flavors-list-27" value="Pear"><label for="flavors-list-27">Pear</label></li>
+                                <li><input type="checkbox" id="flavors-list-28" value="Pepper"><label for="flavors-list-28">Pepper</label></li>
+                                <li><input type="checkbox" id="flavors-list-29" value="Pineapple"><label for="flavors-list-29">Pineapple</label></li>
+                                <li><input type="checkbox" id="flavors-list-30" value="Plum"><label for="flavors-list-30">Plum</label></li>
+                                
+                                <li><input type="checkbox" id="flavors-list-31" value="Pungent"><label for="flavors-list-31">Pungent</label></li>
+                                <li><input type="checkbox" id="flavors-list-32" value="Rose"><label for="flavors-list-32">Rose</label></li>
+                                <li><input type="checkbox" id="flavors-list-33" value="Sage"><label for="flavors-list-33">Sage</label></li>
+                                <li><input type="checkbox" id="flavors-list-34" value="Skunk"><label for="flavors-list-34">Skunk</label></li>
+                                <li><input type="checkbox" id="flavors-list-35" value="Spicy/Herbal"><label for="flavors-list-35">Spicy/Herbal</label></li>
+                                <li><input type="checkbox" id="flavors-list-36" value="Strawberry"><label for="flavors-list-36">Strawberry</label></li>
+                                <li><input type="checkbox" id="flavors-list-37" value="Sweet"><label for="flavors-list-37">Sweet</label></li>
+                                <li><input type="checkbox" id="flavors-list-38" value="Tar"><label for="flavors-list-38">Tar</label></li>
+                                <li><input type="checkbox" id="flavors-list-39" value="Tea"><label for="flavors-list-39">Tea</label></li>
+                                <li><input type="checkbox" id="flavors-list-40" value="Tobacco"><label for="flavors-list-40">Tobacco</label></li>
+                                <li><input type="checkbox" id="flavors-list-41" value="Tree"><label for="flavors-list-41">Tree</label></li>
+                                <li><input type="checkbox" id="flavors-list-42" value="Tropical"><label for="flavors-list-42">Tropical</label></li>
+                                <li><input type="checkbox" id="flavors-list-43" value="Vanilla"><label for="flavors-list-43">Vanilla</label></li>
+                                <li><input type="checkbox" id="flavors-list-44" value="Violet"><label for="flavors-list-44">Violet</label></li>
+                                <li><input type="checkbox" id="flavors-list-45" value="Woody"><label for="flavors-list-45">Woody</label></li>                            
+                            </ul>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="content" data-aos="fade-left">
+                    <div class="content-header">
+                        <p>All the strains grouped by their type and user rating  (Click on the dots to learn more about the strain).</p>
+                    </div>
+                    <div class="main-content">
+                        <div class="content-wrapper">
+                            <div class="content-wrapper-header wrapper-header-indica">
+                                <span class="wrapper-header-title">INDICA</span>
+                                <span class="wrapper-header-value"></span>
+                            </div>
+                            <div class="content-wrapper-chart wrapper-1"></div>
+                        </div>
+                        <div class="content-wrapper">
+                            <div class="content-wrapper-header wrapper-header-sativa">
+                                <span class="wrapper-header-title">SATIVA</span>
+                                <span class="wrapper-header-value"></span>                            
+                            </div>
+                            <div class="content-wrapper-chart wrapper-2"></div>
+                        </div>
+                        <div class="content-wrapper">
+                            <div class="content-wrapper-header wrapper-header-hybrid">
+                                <span class="wrapper-header-title">HYBRID</span>
+                                <span class="wrapper-header-value"></span>                            
+                            </div>
+                            <div class="content-wrapper-chart wrapper-3"></div>
+                        </div>
+                    </div>
+                    <div class="source"><p>Created for #ProjectHealthDataViz</p></div>
+                </div>
+            </div>
+        </section> 
+    </div>
+    <div class="item-tooltip closed">
+        <div class="item-tooltip-header">
+            <div class="item-tooltip-header-title">
+                <p class="item-tooltip-title">Caramel-Kona-Coffee-Cookies</p>
+                <button>X</button>
+            </div>
+            <p class="item-tooltip-desc">Caramel Kona Coffee Cookies by Pua Mana 1st Hawaiian Pakalolo Seed Bank is an immensely heavy indica-leaning hybrid. As the name suggests, this flower reeks of burnt sugar, doughy earth, and tropical flora. The flavor is as sweet and caramel as the aroma, but with spicy notes of hash on the finish. Caramel Kona Coffee Cookies was created by crossing Pua Mana’s Caramel Kona Coffee Kush and Herban Tribe’s GSC Forum Cut. This Kush-heavy combination hits the body like an avalanche, leveling stress and worry to the ground. As this intense physical sensation dissipates, it is replaced by mental and physical elation that elevates the mood, making it ideal for social gatherings or dark winter nights.  </p>
+        </div>
+        <div class="item-tooltip-divider"></div>
+        <div class="item-tooltip-features">
+            <div class="item-tooltip-rating">
+                <p class="item-tooltip-rating-title feature-title">RATING</p>
+                <p class="item-tooltip-rating-value">5.0</p>
+            </div>
+            <div class="item-tooltip-effects">
+                <p class="item-tooltip-effects-title feature-title">EFFECTS</p>
+                <div class="item-tooltip-effects-value">
+                    <p>Aroused, </p>
+                    <p>Talkative, </p>
+                    <p>Uplifted ,</p>
+                    <p>Creative, </p>
+                    <p>Energetic</p>
+                </div>
+            </div>
+            <div class="item-tooltip-flavors">
+                <p class="item-tooltip-flavors-title feature-title">FLAVORS</p>
+                <div class="item-tooltip-flavors-value">
+                    <p>Aroused, </p>
+                    <p>Talkative, </p>
+                    <p>Uplifted ,</p>
+                    <p>Creative, </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal-overlay closed" id="modal-overlay">
+    </div>
+    <script type="text/javascript" src="data.js"></script>
+    <script type="text/javascript" src="app.js"></script>
+</body>
+</html>
