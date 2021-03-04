@@ -1,0 +1,202 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700;800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    margin: 0 auto;
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.main-container {
+    width: 1400px;
+    margin: 0 auto;
+    text-align: center;
+
+}
+.main-chart {
+    margin: 40px 0 20px 0;
+
+}
+
+.arc {
+    fill: #FF7F50;
+}
+
+.base-arc {
+    fill: #E6E4E3;
+}
+
+.radial-axis-label {
+    font-size: 12px;
+}
+
+.tooltip-arc-country {
+    font-size: 16px;
+    color: #666565;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 6px;
+    font-weight: 600;
+}
+
+.tooltip-arc-value {
+    font-size: 14px;
+    color: #666565;
+}
+
+.tooltip-arc-value > span {
+    font-size: 20px;
+    font-weight: bold;
+    color: #FF7F50;
+}
+
+div.tooltip {	
+    position: absolute;		
+    display: flex;	
+    flex-direction: column;
+    justify-content: left;
+    align-items: left;
+    text-align: left;			
+    padding: 12px;	
+    background: white;	
+    border: 1px solid gray;		
+    border-radius: 4px;			
+    pointer-events: none;
+}
+
+.page-header-title {
+    font-size: 48px;
+    font-weight: 800;
+    /* letter-spacing: 0.5px; */
+    color: #3F3E3E;
+}
+
+.page-header-title span{
+    color: #FF7F50;
+}
+
+.page-header-subtitle {
+    font-size: 17px;
+    letter-spacing: 0.5px;
+    color: #666564;
+    text-align: center;
+}
+
+.page-header {
+    margin-bottom: 20px;
+}
+
+.area-charts {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.area-charts > div {
+    width: 320px;
+    height: 200px;
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.12), 0px 1px 4px rgba(0, 0, 0, 0.12);
+    border-radius: 4px;
+    margin: 12px;
+    /* padding-top: 20px; */
+}
+
+.area-charts svg {
+    overflow: visible;
+}
+
+.area {
+    fill: url(#area-gradient);
+    /* stroke-width: 05px; */
+}
+
+.country-title {
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    fill: #666564;
+}
+
+.country-share {
+    fill: #FF7F50;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.country-share-sub {
+    fill: #ababab;
+    font-size: 11px;
+    font-weight: 400;
+}
+
+.area-axis-line {
+    stroke: #666564;
+    stroke-width: 0.5;
+    stroke-dasharray: 2;
+}
+
+.area-axis-label {
+    fill: #9a9a9a;
+    font-size: 9px;
+
+}
+
+.area-axis-label-years {
+    fill: #9a9a9a;
+    font-size: 8px;    
+}
+
+.hidden {
+    opacity: 0;
+}
+
+.overlay {
+    fill: none;
+    pointer-events: all;
+}
+
+.focus circle {
+    fill: #FF7F50;
+}
+
+.focus text {
+    font-size: 14px;
+    fill: #666565;
+}
+
+.tooltip {
+    fill: white;
+    stroke: gray;
+    text-align: left;			
+    /* padding: 12px;    */
+}
+
+.tooltip-date, .tooltip-value {
+    font-weight: bold;
+}
+
+.footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 10px;
+    color: #666565;
+    /* margin-left: 24px; */
+    margin-top: 16px;
+}
+
+.footer p {
+    margin-right: 20px;
+}
+
+.footer a:visited {
+    color: #666565;
+}
